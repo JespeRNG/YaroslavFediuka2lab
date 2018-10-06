@@ -3,4 +3,5 @@
 ##Lection_1: 
 - Schedule (task_1)
 - Calculator (task_2)
-- Zodiak (task_3)
+- Quadratic equations (task 3)
+- Zodiac (task_4)
