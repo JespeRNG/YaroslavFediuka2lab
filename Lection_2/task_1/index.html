@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cipher</title>
+	<script src="T1.js" defer></script>
+</head>
+<body>
+	<style>
+	h1 {
+		font-style: italic;
+		text-align: center;
+		color: green;
+	}
+	div {
+		text-align: center; 
+	}
+	#top {
+		width: 450px;
+	}
+	#bottom {
+		width: 400px;
+	}
+	button {
+		background-color: green;
+		border: none;
+		font-style: italic;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+	}
+    </style>
+    <h1>Cipher</h1>
+    <hr id="top">
+    <div id="box">
+    <div>
+	Input: <input type="text" id="input">
+	Shift: <input type="text" id="shift">
+    </div>	
+	<hr id="bottom">
+	<div>
+	  <button onclick="cipher()" id="but">Cipher</button>
+	  <button onclick="uncipher()">Uncipher</button>
+    </div>	
+</body>
+</html>
