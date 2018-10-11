@@ -33,17 +33,20 @@
         font-size: 16px;
 	}
     </style>
-    <h1>Cipher</h1>
+    <h1>Caesar Cipher</h1>
     <hr id="top">
     <div id="box">
     <div>
 	Input: <input type="text" id="input">
 	Shift: <input type="text" id="shift">
+	<br>
+	<label id="out"></label>
     </div>	
 	<hr id="bottom">
 	<div>
-	  <button onclick="cipher()" id="but">Cipher</button>
-	  <button onclick="uncipher()">Uncipher</button>
+	  <button onclick="toEncrypt()" id="but">Encrypt</button>
+	  <button onclick="toDecrypt()">Decrypt</button>
     </div>	
+    <h1>Sorry for alert :3</h1>
 </body>
 </html>
