@@ -11,4 +11,5 @@
 - Counting words and symbols (task_3);
 
 ##Lection_3
-- node.js, a task with "/" route (task_2)
+- node.js, a task with "/" route (task_2);
+- node.js file service (task_3);
