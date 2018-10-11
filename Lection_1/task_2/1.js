@@ -1,46 +1,41 @@
-var a=document.getElementById("a");
-var b=document.getElementById("b");
-var c=document.getElementById("c");
-var uni=document.getElementById("uni");
-var res;
+var c = document.getElementById("c");
 
 document.getElementById("sum").onclick = function (){
-	a=parseInt(a.value);
-	b=parseInt(b.value);
+	var a=parseInt(document.getElementById("a").value);
+	var b=parseInt(document.getElementById("b").value);
 	res=a+b;
 	c.innerHTML=res;
 }
 
 document.getElementById("min").onclick = function (){
-	a=parseInt(a.value);
-	b=parseInt(b.value);
+	var a=parseInt(document.getElementById("a").value);;
+	var b=parseInt(document.getElementById("b").value);;
 	res=a-b;
 	c.innerHTML=res;
 }
 
 document.getElementById("umn").onclick = function (){
-	a=parseFloat(a.value);
-	b=parseFloat(b.value);
+	var a=parseFloat(document.getElementById("a").value);;
+	var b=parseFloat(document.getElementById("b").value);;
 	res=a*b;
 	c.innerHTML=res;
 }
 
 document.getElementById("del").onclick = function (){
-	a=parseFloat(a.value);
-	b=parseFloat(b.value);
+	var a=parseFloat(document.getElementById("a").value);;
+	var b=parseFloat(document.getElementById("b").value);;
 	res=a/b;
 	c.innerHTML=res;
 }
 
 document.getElementById("kor").onclick = function (){
-	uni=parseFloat(uni.value);
+	var uni=parseFloat(document.getElementById("uni").value);
 	res=Math.sqrt(uni);
-	alert(res);
 	uni_label.innerHTML=res;
 }
 
 document.getElementById("fak").onclick = function (){
-	uni=uni.value;
+	var uni=parseFloat(document.getElementById("uni").value);
 	res=uni;
 	var numbers=[];
 	var n=0;
@@ -52,5 +47,5 @@ document.getElementById("fak").onclick = function (){
 	for (n; n>0; n--){
 		res*=n;
 	}
-	console.log(res);
+	document.getElementById("uni_label").innerHTML =res;
 }
