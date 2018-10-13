@@ -6,8 +6,45 @@
 	<script src="1.js" defer></script>
 </head>
 <body>
-	<h1 id="header"></h1>
-	<img src="" alt="" id="img">
+	<h1>Choose your schedule below: </h1>
+	<div id="lessons" style="display: none">
+		<table border="1px">
+			<th colspan="2">Lessons</th>
+			<tr>
+				<td>1.</td><td>Maths</td>
+			</tr>
+			<tr>
+				<td>2.</td><td>Ukrainian Lang.</td>
+			</tr>
+			<tr>
+				<td>3.</td><td>English lang.</td>
+			</tr>
+			<tr>
+				<td>4.</td><td>Physics</td>
+			</tr>
+		</table>
+		<div style="height: #calls.style.height; position: absolute; left: 100px; top: 115px; -webkit-transform: rotate(270deg);">
+			<p>It's a short day :)</p>
+		</div>
+	</div>
+	<div id="calls" style="display: none">
+		<table border="1px">
+			<th colspan="2">Calls</th>
+			<tr>
+				<td>1.</td><td>8:00-8:45</td>
+			</tr>
+			<tr>
+				<td>2.</td><td>8:55-9:40</td>
+			</tr>
+			<tr>
+				<td>3.</td><td>9:50-10:35</td>
+			</tr>
+			<tr>
+				<td>4.</td><td>10:45-11:30</td>
+			</tr>
+		</table>
+	</div>
+	<br>
 	<button onclick="shw_calls()">Calls</button>
 	<button onclick="shw_lessons()">Lessons</button>
 </body>

@@ -1,9 +1,20 @@
+var div_l = document.getElementById("lessons");
+var div_c = document.getElementById("calls");
+
 function shw_calls(){
-	document.getElementById('header').innerHTML="Schedule of calls";
-	document.getElementById('img').src="./calls.jpg";
+   	if (div_c.style.display === "none" && div_l.style.display === "none") {
+        div_c.style.display = "block";
+    } else {
+        div_c.style.display = "block";
+        div_l.style.display = "none";
+    }
 }
 
 function shw_lessons(){
-	document.getElementById('header').innerHTML="Schedule of lessons";
-	document.getElementById('img').src="./lessons.jpg";
+	if (div_l.style.display === "none" && div_c.style.display === "none"){
+		div_l.style.display = "block";
+	} else {
+		div_l.style.display = "block";
+		div_c.style.display = "none"; 
+    }
 }
