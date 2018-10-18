@@ -1,47 +1,56 @@
-function login(){
-	var log = document.getElementById("login").value;
-	var pass = document.getElementById("pass").value;
-	var log_conf = 0; //login confirmation
+var check_l = 1;
+var check_p = 1;
+
+function login_check(){
+	emailValidate();
+	passValidate();
+
+	if (check_l == 1 && check_p == 1) alert ("Login successful");
+	if (check_l == 1 && check_p == 0) alert ("Check your password");
+	if (check_l == 0 && check_p == 1) alert ("Check your login");
+	if (check_l == 0 && check_p == 0) alert ("Login failed");
+}
+
+function emailValidate(){
+	var mail = document.getElementById("login").value;
 	var cnt = 0; //counter for @
-	var pass_conf = 0; //password confirmation
-	var numbs = ["1","2","3","4","5","6","7","8","9","0"];
-	
-	//login check
-	for (var i=0; i < log.length; i++){ 
-		if (log[i]=="@"){
-			cnt++;
-			log_conf=1;
-		}else {
-			log_conf = 0;
-		}
+	var mem = 0; // '@' i position in string
 
-		if (cnt > 1 || cnt < 1){
-			log_conf=0;
+	for (var i=0; i < mail.length; i++){
+		if (mail[i] == "@"){
+			cnt ++;
+			mem = i;
 		}
 	}
-	cnt = 0;
 
-	//password check
-	for (var i=0; i < pass.length; i++){ 
+	if (mail.lastIndexOf(".") < 2 || mail.indexOf("@") < 1 || mail.lastIndexOf(".")<mail.indexOf("@")+2 || mail.lastIndexOf(".")+3 > mail.length){
+		check_l = 0;
+		console.log ("da, v etom");
+	}
+
+	if (cnt < 1 || cnt > 1){
+		check_l = 0;
+	} 
+}
+
+function passValidate(){
+	var pass = document.getElementById("pass").value;
+
+	for (var i=0; i < pass.length; i++){
 		if (pass.length < 8){
-			pass_conf = 0;
-		}else {
-			pass_conf = 1;
-		}
+			console.log("length pass");
+			check_p = 0;
+			break;
+		} 
 
-		for (var j=0; j < numbs.length; j++){
-			if (pass[i]==numbs[j]){
-				pass_conf = 1;
-			}else{
-				pass_conf = 0;
-				console.log ("err");
-			}
-		}
-	}
+		var code = pass.charCodeAt(i); //ASCII
 
-	if (pass_conf == 1 && log_conf == 1){
-		alert ("Login successful!");
-	}else {
-		alert ("Login failed");
+		if (code >= 48 && code <= 57 || code >=65 && code <= 90 || code >=97 && code <= 122){
+			console.log('success');
+		}else{
+			console.log("code pass");
+			check_p = 0;
+			break;
+		}
 	}
 }
