@@ -9,6 +9,7 @@
 ##Lection_2:
 - Caesar cipher (task_1);
 - Counting words and symbols (task_3);
+- Login form (task_4);
 
 ##Lection_3
 - node.js, a task with "/" route (task_2);
