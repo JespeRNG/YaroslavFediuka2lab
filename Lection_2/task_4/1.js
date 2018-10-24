@@ -38,10 +38,10 @@ function passValidate(){
 
 	for (var i=0; i < pass.length; i++){
 		if (pass.length < 8){
-			console.log("length pass");
 			check_p = 0;
 			break;
-		} 
+		}
+		console.log("proshel");
 
 		var code = pass.charCodeAt(i); //ASCII
 
@@ -52,5 +52,10 @@ function passValidate(){
 			check_p = 0;
 			break;
 		}
+	}
+
+	if (pass.value === null){
+		check_p = 0;
+		console.log('test');
 	}
 }
